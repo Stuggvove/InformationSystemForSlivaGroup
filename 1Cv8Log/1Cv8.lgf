@@ -32,4 +32,7 @@
 {5,01031b9e-4f52-4fda-85cc-c128d9073829,"Справочник.Институты",4},
 {4,"_$Session$_.ExternalDataProcessorConnect",14},
 {4,"_$InfoBase$_.DBConfigUpdateError",15},
-{4,"_$PerformError$_",16}
+{4,"_$PerformError$_",16},
+{5,192dd47c-f553-4111-a4de-1931de2e6ad0,"",5},
+{4,"_$Data$_.Delete",17},
+{5,192dd47c-f553-4111-a4de-1931de2e6ad0,"Справочник.ЭтапыПроектов",5}
