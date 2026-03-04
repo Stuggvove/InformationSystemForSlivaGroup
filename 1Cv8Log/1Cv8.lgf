@@ -47,4 +47,14 @@
 {4,"_$Access$_.AccessDenied",20},
 {4,"_$Transaction$_.Rollback",21},
 {5,8ed62483-3836-4905-a8c5-7989f43af65f,"БизнесПроцесс.НазначитьСозвон",7},
-{5,2cd7e645-9454-4aa3-b2a5-36d19de18618,"Задача.Созвон",8}
+{5,2cd7e645-9454-4aa3-b2a5-36d19de18618,"Задача.Созвон",8},
+{1,7ad3d529-654a-48d9-b0fe-657e8fca85d5,"Добрынин Андрей",4},
+{13,1,4},
+{4,"_$InfoBase$_.ConfigExtensionUpdate",22},
+{4,"_$InfoBase$_.DBConfigExtensionUpdate",23},
+{4,"_$InfoBase$_.DumpStart",24},
+{4,"_$InfoBase$_.DumpFinish",25},
+{4,"_$InfoBase$_.DBConfigExtensionDelete",26},
+{5,24c64f47-005a-4fb7-af31-d3eb378dd42c,"Документ.ОперацииПоКарте",9},
+{4,"_$Data$_.Post",27},
+{4,"_$Data$_.Unpost",28}
