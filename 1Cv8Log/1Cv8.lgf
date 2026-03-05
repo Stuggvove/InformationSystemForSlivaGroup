@@ -57,4 +57,5 @@
 {4,"_$InfoBase$_.DBConfigExtensionDelete",26},
 {5,24c64f47-005a-4fb7-af31-d3eb378dd42c,"Документ.ОперацииПоКарте",9},
 {4,"_$Data$_.Post",27},
-{4,"_$Data$_.Unpost",28}
+{4,"_$Data$_.Unpost",28},
+{4,"_$User$_.Update",29}
