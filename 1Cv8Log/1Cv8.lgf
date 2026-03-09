@@ -60,4 +60,5 @@
 {4,"_$Data$_.Unpost",28},
 {4,"_$User$_.Update",29},
 {4,"_$Job$_.Start",30},
-{4,"_$Job$_.Finish",31}
+{4,"_$Job$_.Finish",31},
+{5,768fb2d8-4b79-44eb-b119-f170d8f61271,"Константа.ТокенTelegram",10}
