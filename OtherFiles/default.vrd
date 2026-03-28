@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point xmlns="http://v8.1c.ru/8.2/virtual-resource-system"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		base="/SGIS"
+		ib="File=&quot;C:\Users\dobri\Desktop\Диплом\ИС\DevFiles&quot;;">
+	<ws enable="false"
+			pointEnableCommon="true"/>
+	<standardOdata enable="true"
+			reuseSessions="autouse"
+			sessionMaxAge="20"
+			poolSize="10"
+			poolTimeout="5"/>
+	<analytics enable="true"
+			sessionMaxAge="1200"
+			poolSize="500"
+			poolTimeout="5"/>
+	<httpServices>
+		<service name="TelegramWebhook"
+				rootUrl="telegram"
+				enable="true"
+				reuseSessions="autouse"
+				sessionMaxAge="20"
+				poolSize="10"
+				poolTimeout="5">
+			<accessTokenAuthentication>
+				<issuers/>
+				<accessTokenRecepientName/>
+			</accessTokenAuthentication>
+		</service>
+	</httpServices>
+</point>
