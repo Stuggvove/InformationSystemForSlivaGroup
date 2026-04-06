@@ -1,8 +1,9 @@
-1. Запустите Apache (если не запущен)
+1. Запустить Apache (если не запущен)
 "E:\Program Files (x86)\Apache24\httpd-2.4.66-260131-win32-vs18\Apache24\bin\httpd.exe" -k start
-2. Запустите Cloudflare туннель
+2. Запустить Cloudflare туннель
 "E:\Program Files (x86)\cloudflared\cloudflared.exe" tunnel --url http://localhost:80
-Скопируйте URL вида https://xxxx.trycloudflare.com
-3. Зарегистрируйте Webhook в 1С
-4. Перейти по ссылке для авторизации: http://localhost/SGIS/hs/telegram/
-5. Если не помогло: "E:\Program Files (x86)\cloudflared\cloudflared.exe" tunnel --url http://localhost:80 --protocol http2
+3. Скопировать URL вида https://xxxx.trycloudflare.com
+4. Зарегистрируйте Webhook в 1С
+5. Перейти по ссылке для авторизации: http://localhost/SGIS/hs/telegram/
+6. Если не помогло: 
+"E:\Program Files (x86)\cloudflared\cloudflared.exe" tunnel --url http://localhost:80 --protocol http2
