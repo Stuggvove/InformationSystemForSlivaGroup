@@ -3,7 +3,7 @@
 2. Запустить Cloudflare туннель
 "E:\Program Files (x86)\cloudflared\cloudflared.exe" tunnel --url http://localhost:80
 3. Скопировать URL вида https://xxxx.trycloudflare.com
-4. Зарегистрируйте Webhook в 1С
+4. Зарегистровать Webhook в 1С
 5. Перейти по ссылке для авторизации: http://localhost/SGIS/hs/telegram/
 6. Если не помогло: 
 "E:\Program Files (x86)\cloudflared\cloudflared.exe" tunnel --url http://localhost:80 --protocol http2
