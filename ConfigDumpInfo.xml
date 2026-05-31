@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.21">
+	<ConfigVersions>
+		<Metadata name="Configuration.SGIS" id="d91c9f6b-ea06-4bce-82ba-1fdb6c43d614" configVersion="b6634ef461c49e46b17dfe90f464021300000000"/>
+		<Metadata name="Configuration.SGIS.CommandInterface" id="bd73ceee-c977-4ee5-b63d-a9aa1af156e6.a" configVersion="0da2151dc0125240a3351c1f234873f600000000"/>
+		<Metadata name="Configuration.SGIS.MainSectionCommandInterface" id="bd73ceee-c977-4ee5-b63d-a9aa1af156e6.9" configVersion="b17dc0f172808040a57a01505b71bd6700000000"/>
+		<Metadata name="Configuration.SGIS.ManagedApplicationModule" id="bd73ceee-c977-4ee5-b63d-a9aa1af156e6.6" configVersion="6099fabf7c2f13448ba87b35f6d3e33400000000"/>
+		<Metadata name="Language.Русский" id="d6ca21ea-da13-4fc6-b570-37fd91496dcf" configVersion="9fc60ab34c0091478befff82c9c63f8900000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>
