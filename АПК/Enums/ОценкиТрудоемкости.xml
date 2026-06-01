@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Enum uuid="53d41e24-ca83-4d10-b249-ad2c185b26d7">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ОценкиТрудоемкости" category="Ref">
+				<xr:TypeId>b680a64e-2da0-4144-8dd1-bf5f4d0dd36d</xr:TypeId>
+				<xr:ValueId>94b75587-157c-467e-af48-9ec0e91f5f41</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ОценкиТрудоемкости" category="Manager">
+				<xr:TypeId>7c5292c4-e252-4ef4-bd97-81a944a48a62</xr:TypeId>
+				<xr:ValueId>d2f7ec2d-de31-41ed-afef-a9a65d66bf59</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ОценкиТрудоемкости" category="List">
+				<xr:TypeId>1f315b30-c535-4d17-9f31-951f5e53e2af</xr:TypeId>
+				<xr:ValueId>096ad187-b20a-40d1-b747-4e9e278d3686</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ОценкиТрудоемкости</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оценки трудоемкости</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm>Enum.ОценкиТрудоемкости.Form.ФормаВыбора</DefaultChoiceForm>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оценки трудоемкости</v8:content>
+				</v8:item>
+			</ListPresentation>
+			<ExtendedListPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оценки трудоемкости</v8:content>
+				</v8:item>
+			</ExtendedListPresentation>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="911c6ac0-0b5d-43fd-bc7b-329aa2667906">
+				<Properties>
+					<Name>Быстро</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Быстро</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>pal:Green</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="dddd02d6-e31d-49c0-907c-b0fbf0dc0e4b">
+				<Properties>
+					<Name>Средне</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Средне</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>pal:Yellow</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="74934a21-d5e0-4d58-8883-710dde3c2e7b">
+				<Properties>
+					<Name>Долго</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Долго</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>pal:Red</Color>
+				</Properties>
+			</EnumValue>
+			<Form>ФормаВыбора</Form>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

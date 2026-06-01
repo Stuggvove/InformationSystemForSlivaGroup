@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Основное" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основное</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AutoScreenTypeSensitive</Group>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОсновноеРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ЛеваяКолонка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>30</Width>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ScrollOnCompress>true</ScrollOnCompress>
+					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="Номер" id="7">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Дата" id="11">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="13"/>
+						</InputField>
+						<InputField name="ТипОперации" id="15">
+							<DataPath>Объект.ТипОперации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТипОперацииКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ТипОперацииРасширеннаяПодсказка" id="17"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>70</Width>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Table name="СписокТранзакций" id="19">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.СписокТранзакций</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокТранзакцийКонтекстноеМеню" id="20"/>
+							<AutoCommandBar name="СписокТранзакцийКоманднаяПанель" id="21"/>
+							<ExtendedTooltip name="СписокТранзакцийРасширеннаяПодсказка" id="22"/>
+							<SearchStringAddition name="СписокТранзакцийСтрокаПоиска" id="23">
+								<AdditionSource>
+									<Item>СписокТранзакций</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокТранзакцийСтрокаПоискаКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="СписокТранзакцийСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокТранзакцийСостояниеПросмотра" id="26">
+								<AdditionSource>
+									<Item>СписокТранзакций</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокТранзакцийСостояниеПросмотраКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="СписокТранзакцийСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокТранзакцийУправлениеПоиском" id="29">
+								<AdditionSource>
+									<Item>СписокТранзакций</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокТранзакцийУправлениеПоискомКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="СписокТранзакцийУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СписокТранзакцийНомерСтроки" id="34">
+									<DataPath>Объект.СписокТранзакций.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокТранзакцийНомерСтрокиКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="СписокТранзакцийНомерСтрокиРасширеннаяПодсказка" id="36"/>
+								</LabelField>
+								<InputField name="СписокТранзакцийНаименованиеТранзакции" id="38">
+									<DataPath>Объект.СписокТранзакций.НаименованиеТранзакции</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СписокТранзакцийНаименованиеТранзакцииКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="СписокТранзакцийНаименованиеТранзакцииРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="СписокТранзакцийСуммаСписания" id="42">
+									<DataPath>Объект.СписокТранзакций.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СписокТранзакцийСуммаСписанияКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="СписокТранзакцийСуммаСписанияРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<InputField name="СписокТранзакцийВалютаСписания" id="46">
+									<DataPath>Объект.СписокТранзакций.Валюта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СписокТранзакцийВалютаСписанияКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="СписокТранзакцийВалютаСписанияРасширеннаяПодсказка" id="48"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ОперацииПоКарте</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.ОстаткиНаКарте.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Enum uuid="0bec6986-e9e2-4e39-be45-a4981761f382">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.УровниОбразования" category="Ref">
+				<xr:TypeId>d664856f-4d34-4e03-8076-976606646c44</xr:TypeId>
+				<xr:ValueId>5b426d58-860a-44f8-b220-846ebbd306b8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.УровниОбразования" category="Manager">
+				<xr:TypeId>971f14a7-8161-4d7c-acf0-17f92f1dfd1b</xr:TypeId>
+				<xr:ValueId>e1d12ce1-2ede-4b3b-a50f-045c9940b674</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.УровниОбразования" category="List">
+				<xr:TypeId>0c5183f1-e836-473a-89c3-812c303efd7e</xr:TypeId>
+				<xr:ValueId>04ed6809-be20-474c-aead-96c5554f03d4</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>УровниОбразования</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уровни образования</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уровни образования</v8:content>
+				</v8:item>
+			</ListPresentation>
+			<ExtendedListPresentation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уровни образования</v8:content>
+				</v8:item>
+			</ExtendedListPresentation>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="c7c17430-9c25-41fc-8c62-d744b6a7521b">
+				<Properties>
+					<Name>Бакалавриат</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бакалавриат</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>web:Gold</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="bc071792-ed12-4124-b1c4-ae0407ab6e11">
+				<Properties>
+					<Name>Специалитет</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Специалитет</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>web:MediumOrchid</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="90586a92-a439-4aef-8371-b508317760df">
+				<Properties>
+					<Name>Магистратура</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магистратура</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>web:MediumSlateBlue</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d6af4970-5959-4760-ab3d-a7238f6a9de4">
+				<Properties>
+					<Name>Аспирантура</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аспирантура</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>web:LawnGreen</Color>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

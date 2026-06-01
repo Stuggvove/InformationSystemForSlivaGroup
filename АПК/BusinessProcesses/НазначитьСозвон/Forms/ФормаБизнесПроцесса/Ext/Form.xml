@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Group>HorizontalIfPossible</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Основное" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основное</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ScrollOnCompress>true</ScrollOnCompress>
+			<ExtendedTooltip name="ОсновноеРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="Номер" id="3">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="5"/>
+				</InputField>
+				<InputField name="Дата" id="7">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ВедущаяЗадача" id="11">
+					<DataPath>Объект.HeadTask</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Созвон</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+					<TypeLink>
+						<xr:DataPath>Объект.Ref</xr:DataPath>
+						<xr:LinkItem>0</xr:LinkItem>
+					</TypeLink>
+					<ContextMenu name="ВедущаяЗадачаКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ВедущаяЗадачаРасширеннаяПодсказка" id="13"/>
+				</InputField>
+				<InputField name="ДатаСозвона" id="62">
+					<DataPath>Объект.ДатаСозвона</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаСозвонаКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ДатаСозвонаРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="СсылкаНаСозвон" id="90">
+					<DataPath>Объект.СсылкаНаСозвон</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вставьте вместо значения по умолчанию ссылку на созвон</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СсылкаНаСозвонКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="СсылкаНаСозвонРасширеннаяПодсказка" id="92"/>
+				</InputField>
+				<CheckBoxField name="Стартован" id="15">
+					<DataPath>Объект.Started</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СтартованКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="СтартованРасширеннаяПодсказка" id="17"/>
+				</CheckBoxField>
+				<CheckBoxField name="Завершен" id="19">
+					<DataPath>Объект.Completed</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗавершенКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ЗавершенРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Сотрудники" id="23">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Сотрудники</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СотрудникиКонтекстноеМеню" id="24"/>
+			<AutoCommandBar name="СотрудникиКоманднаяПанель" id="25"/>
+			<ExtendedTooltip name="СотрудникиРасширеннаяПодсказка" id="26"/>
+			<SearchStringAddition name="СотрудникиСтрокаПоиска" id="27">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиСтрокаПоискаКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="СотрудникиСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СотрудникиСостояниеПросмотра" id="30">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиСостояниеПросмотраКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="СотрудникиСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СотрудникиУправлениеПоиском" id="33">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиУправлениеПоискомКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="СотрудникиУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СотрудникиНомерСтроки" id="38">
+					<DataPath>Объект.Сотрудники.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="СотрудникиНомерСтрокиКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СотрудникиНомерСтрокиРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<InputField name="СотрудникиСотрудник" id="42">
+					<DataPath>Объект.Сотрудники.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СотрудникиСотрудникКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="СотрудникиСотрудникРасширеннаяПодсказка" id="44"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:BusinessProcessObject.НазначитьСозвон</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Task.Созвон.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

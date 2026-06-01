@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<CommandsVisibility>
+		<Command name="Catalog.Сотрудники.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Проекты.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Заказчики.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Институты.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+				<xr:Value name="Role.РуководительПроектов">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Отделы.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+				<xr:Value name="Role.РуководительПроектов">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.УчетныеЗаписиTelegram.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+				<xr:Value name="Role.РуководительПроектов">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ЗафиксироватьВремяЗадачи.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Document.ОперацииПоКарте.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоБалансуКарты.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоВыполненнымЗадачам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоРабочемуВремени.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоСдельномуВремени.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоСозвонам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоСообщениямВTelegram.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+				<xr:Value name="Role.РуководительПроектов">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ОтчетПоСотрудникам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПраваСотрудника">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.КанбанДоска.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="Catalog.Сотрудники.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Проекты.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Заказчики.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Институты.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.Отделы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Catalog.УчетныеЗаписиTelegram.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ЗафиксироватьВремяЗадачи.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Document.ОперацииПоКарте.StandardCommand.Create">
+			<CommandGroup>ActionsPanelCreate</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоБалансуКарты.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоВыполненнымЗадачам.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоРабочемуВремени.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоСдельномуВремени.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоСозвонам.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоСообщениямВTelegram.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="Report.ОтчетПоСотрудникам.StandardCommand.Open">
+			<CommandGroup>ActionsPanelReports</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+		<Command name="DataProcessor.КанбанДоска.StandardCommand.Open">
+			<CommandGroup>ActionsPanelTools</CommandGroup>
+			<Placement>Manual</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Catalog.Сотрудники.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.Проекты.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.УчетныеЗаписиTelegram.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
+		<Group>NavigationPanelSeeAlso</Group>
+	</GroupsOrder>
+</CommandInterface>

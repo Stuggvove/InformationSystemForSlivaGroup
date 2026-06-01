@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="ТекущееВремяОтображения" id="13">
+			<DataPath>ТекущееВремяОтображения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время работы</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ТекущееВремяОтображенияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТекущееВремяОтображенияРасширеннаяПодсказка" id="15"/>
+		</LabelField>
+		<CommandBar name="ПунктУправления" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пункт управления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пункт управления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<GroupVerticalAlign>Center</GroupVerticalAlign>
+			<ExtendedTooltip name="ПунктУправленияРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Button name="НажатьСтарт" id="41">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.НажатьСтарт</CommandName>
+					<BackColor>pal:Green</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Старт</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НажатьСтартРасширеннаяПодсказка" id="42"/>
+				</Button>
+				<Button name="НажатьВозобновить" id="112">
+					<Type>CommandBarButton</Type>
+					<Visible>false</Visible>
+					<CommandName>Form.Command.НажатьВозобновить</CommandName>
+					<BackColor>pal:Green</BackColor>
+					<ExtendedTooltip name="НажатьВозобновитьРасширеннаяПодсказка" id="113"/>
+				</Button>
+				<Button name="НажатьПерерыв" id="45">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.НажатьПерерыв</CommandName>
+					<BackColor>#949308</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перерыв</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НажатьПерерывРасширеннаяПодсказка" id="46"/>
+				</Button>
+				<Button name="НажатьСтоп" id="43">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.НажатьСтоп</CommandName>
+					<BackColor>pal:Red</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоп</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НажатьСтопРасширеннаяПодсказка" id="44"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<UsualGroup name="Текущее" id="110">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ТекущееРасширеннаяПодсказка" id="111"/>
+			<ChildItems>
+				<InputField name="ТекущийТип" id="21">
+					<DataPath>ТекущийТип</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип таймера</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТекущийТипКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ТекущийТипРасширеннаяПодсказка" id="23"/>
+				</InputField>
+				<InputField name="ТекущаяЗадача" id="9">
+					<DataPath>ТекущаяЗадача</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТекущаяЗадачаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ТекущаяЗадачаРасширеннаяПодсказка" id="11"/>
+				</InputField>
+				<InputField name="ТекущийКомментарий" id="17">
+					<DataPath>ТекущийКомментарий</DataPath>
+					<Visible>false</Visible>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТекущийКомментарийКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТекущийКомментарийРасширеннаяПодсказка" id="19"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Таймер" id="49">
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ExtendedTooltip name="ТаймерРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<InputField name="СтартВремени" id="1">
+					<DataPath>СтартВремени</DataPath>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СтартВремениКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="СтартВремениРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<CheckBoxField name="ТаймерАктивен" id="5">
+					<DataPath>ТаймерАктивен</DataPath>
+					<ContextMenu name="ТаймерАктивенКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ТаймерАктивенРасширеннаяПодсказка" id="7"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ИсторияЗаСегодня" id="51">
+			<Representation>List</Representation>
+			<Enabled>false</Enabled>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ИсторияЗаСегодня</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИсторияЗаСегодняКонтекстноеМеню" id="52"/>
+			<AutoCommandBar name="ИсторияЗаСегодняКоманднаяПанель" id="53"/>
+			<ExtendedTooltip name="ИсторияЗаСегодняРасширеннаяПодсказка" id="54"/>
+			<SearchStringAddition name="ИсторияЗаСегодняСтрокаПоиска" id="55">
+				<AdditionSource>
+					<Item>ИсторияЗаСегодня</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсторияЗаСегодняСтрокаПоискаКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="ИсторияЗаСегодняСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИсторияЗаСегодняСостояниеПросмотра" id="58">
+				<AdditionSource>
+					<Item>ИсторияЗаСегодня</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсторияЗаСегодняСостояниеПросмотраКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="ИсторияЗаСегодняСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИсторияЗаСегодняУправлениеПоиском" id="61">
+				<AdditionSource>
+					<Item>ИсторияЗаСегодня</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИсторияЗаСегодняУправлениеПоискомКонтекстноеМеню" id="62"/>
+				<ExtendedTooltip name="ИсторияЗаСегодняУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ИсторияЗаСегодняВремяНачала" id="66">
+					<DataPath>ИсторияЗаСегодня.ВремяНачала</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИсторияЗаСегодняВремяНачалаКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ИсторияЗаСегодняВремяНачалаРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="ИсторияЗаСегодняВремяОкончания" id="70">
+					<DataPath>ИсторияЗаСегодня.ВремяОкончания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИсторияЗаСегодняВремяОкончанияКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ИсторияЗаСегодняВремяОкончанияРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="ИсторияЗаСегодняТипЗаписи" id="74">
+					<DataPath>ИсторияЗаСегодня.ТипЗаписи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИсторияЗаСегодняТипЗаписиКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ИсторияЗаСегодняТипЗаписиРасширеннаяПодсказка" id="76"/>
+				</InputField>
+				<InputField name="ИсторияЗаСегодняЗадача" id="78">
+					<DataPath>ИсторияЗаСегодня.Задача</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИсторияЗаСегодняЗадачаКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ИсторияЗаСегодняЗадачаРасширеннаяПодсказка" id="80"/>
+				</InputField>
+				<InputField name="ИсторияЗаСегодняКомментарий" id="82">
+					<DataPath>ИсторияЗаСегодня.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИсторияЗаСегодняКомментарийКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ИсторияЗаСегодняКомментарийРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<InputField name="ИсторияЗаСегодняДлительность" id="86">
+					<DataPath>ИсторияЗаСегодня.Длительность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ИсторияЗаСегодняДлительностьКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="ИсторияЗаСегодняДлительностьРасширеннаяПодсказка" id="88"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ТаймерРабочегоВремени</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаймерАктивен" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер активен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтартВремени" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старт времени</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущееВремяОтображения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее время отображения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийТип" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий тип</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипЗаписиВремени</v8:Type>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ТекущаяЗадача" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая задача</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:TaskRef.Задача</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийКомментарий" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсторияЗаСегодня" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История за сегодня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВремяНачала" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время начала</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВремяОкончания" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время окончания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипЗаписи" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип записи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ТипЗаписиВремени</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Задача" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:TaskRef.Задача</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Длительность" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Длительность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПредыдущийТип" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий тип</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипЗаписиВремени</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НажатьСтарт" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нажать старт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нажать старт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НажатьСтарт</Action>
+		</Command>
+		<Command name="НажатьСтоп" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нажать стоп</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нажать стоп</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НажатьСтоп</Action>
+		</Command>
+		<Command name="НажатьПерерыв" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нажать перерыв</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нажать перерыв</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НажатьПерерыв</Action>
+		</Command>
+		<Command name="НажатьВозобновить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возобновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Нажать возобновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НажатьВозобновить</Action>
+		</Command>
+	</Commands>
+</Form>

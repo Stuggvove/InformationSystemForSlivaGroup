@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Добро пожаловать в систему! Данные актуальны, инструменты наготове!</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ШапкаФормы" id="158">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка формы </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаФормыРасширеннаяПодсказка" id="159"/>
+			<ChildItems>
+				<LabelDecoration name="Приветствие" id="1">
+					<MaxWidth>100</MaxWidth>
+					<MaxHeight>50</MaxHeight>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Font ref="style:TextLevel3" height="16" kind="StyleItem" scale="100"/>
+					<ContextMenu name="ПриветствиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПриветствиеРасширеннаяПодсказка" id="3"/>
+				</LabelDecoration>
+				<LabelDecoration name="СегодняшняяДата" id="160">
+					<ContextMenu name="СегодняшняяДатаКонтекстноеМеню" id="161"/>
+					<ExtendedTooltip name="СегодняшняяДатаРасширеннаяПодсказка" id="162"/>
+				</LabelDecoration>
+				<LabelField name="Таймер" id="163">
+					<DataPath>Таймер</DataPath>
+					<ContextMenu name="ТаймерКонтекстноеМеню" id="164"/>
+					<ExtendedTooltip name="ТаймерРасширеннаяПодсказка" id="165"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПоПроектам" id="4">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По проектам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ПоПроектамРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<Button name="СправочникПроектыОткрытьСписок" id="6">
+					<Type>UsualButton</Type>
+					<CommandName>Catalog.Проекты.StandardCommand.OpenList</CommandName>
+					<BackColor>pal:FirstBrand</BackColor>
+					<ExtendedTooltip name="СправочникПроектыОткрытьСписокРасширеннаяПодсказка" id="7"/>
+				</Button>
+				<Button name="СправочникПроектыСоздать" id="8">
+					<Type>UsualButton</Type>
+					<CommandName>Catalog.Проекты.StandardCommand.Create</CommandName>
+					<BackColor>pal:FirstBrand</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать новый проект</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СправочникПроектыСоздатьРасширеннаяПодсказка" id="9"/>
+				</Button>
+				<Button name="ОткрытьКанбанДоску" id="10">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОткрытьКанбанДоску</CommandName>
+					<BackColor>pal:FirstBrand</BackColor>
+					<ExtendedTooltip name="ОткрытьКанбанДоскуРасширеннаяПодсказка" id="11"/>
+				</Button>
+				<Button name="ЗадачаЗадачаОткрытьСписок1" id="58">
+					<Type>UsualButton</Type>
+					<CommandName>Task.Задача.StandardCommand.OpenList</CommandName>
+					<BackColor>pal:FirstBrand</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все задачи</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗадачаЗадачаОткрытьСписок1РасширеннаяПодсказка" id="59"/>
+				</Button>
+				<Button name="ЗадачаЗадачаСоздать1" id="62">
+					<Type>UsualButton</Type>
+					<CommandName>Task.Задача.StandardCommand.Create</CommandName>
+					<BackColor>pal:FirstBrand</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создать задачу</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗадачаЗадачаСоздать1РасширеннаяПодсказка" id="63"/>
+				</Button>
+				<Button name="ОбработкаТаймерРабочегоВремениОткрыть1" id="152">
+					<Type>UsualButton</Type>
+					<CommandName>DataProcessor.ТаймерРабочегоВремени.StandardCommand.Open</CommandName>
+					<BackColor>pal:FirstBrand</BackColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать рабочий день</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОбработкаТаймерРабочегоВремениОткрыть1РасширеннаяПодсказка" id="153"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<Page name="Общая" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбщаяРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<UsualGroup name="Все_Проекты" id="122">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все проекты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все проекты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Все_ПроектыРасширеннаяПодсказка" id="123"/>
+							<ChildItems>
+								<UsualGroup name="Все_ПроектыОтчеты" id="142">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Все проекты отчеты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Все проекты отчеты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Все_ПроектыОтчетыРасширеннаяПодсказка" id="143"/>
+									<ChildItems>
+										<Button name="ОтчетОтчетПоСозвонамОткрыть1" id="134">
+											<Type>UsualButton</Type>
+											<CommandName>Report.ОтчетПоСозвонам.StandardCommand.Open</CommandName>
+											<ExtendedTooltip name="ОтчетОтчетПоСозвонамОткрыть1РасширеннаяПодсказка" id="135"/>
+										</Button>
+										<Button name="ОтчетОтчетПоВыполненнымЗадачамОткрыть2" id="136">
+											<Type>UsualButton</Type>
+											<CommandName>Report.ОтчетПоВыполненнымЗадачам.StandardCommand.Open</CommandName>
+											<ExtendedTooltip name="ОтчетОтчетПоВыполненнымЗадачамОткрыть2РасширеннаяПодсказка" id="137"/>
+										</Button>
+										<Button name="ОтчетОтчетПоРабочемуВремениОткрыть2" id="138">
+											<Type>UsualButton</Type>
+											<CommandName>Report.ОтчетПоРабочемуВремени.StandardCommand.Open</CommandName>
+											<ExtendedTooltip name="ОтчетОтчетПоРабочемуВремениОткрыть2РасширеннаяПодсказка" id="139"/>
+										</Button>
+										<Button name="ОтчетОтчетПоСдельномуВремениОткрыть2" id="132">
+											<Type>UsualButton</Type>
+											<CommandName>Report.ОтчетПоСдельномуВремени.StandardCommand.Open</CommandName>
+											<ExtendedTooltip name="ОтчетОтчетПоСдельномуВремениОткрыть2РасширеннаяПодсказка" id="133"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Все_ПроектыОбъекты" id="140">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Все проекты объекты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Все проекты объекты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Все_ПроектыОбъектыРасширеннаяПодсказка" id="141"/>
+									<ChildItems>
+										<Button name="СправочникЗаказчикиОткрытьСписок1" id="126">
+											<Type>UsualButton</Type>
+											<CommandName>Catalog.Заказчики.StandardCommand.OpenList</CommandName>
+											<ExtendedTooltip name="СправочникЗаказчикиОткрытьСписок1РасширеннаяПодсказка" id="127"/>
+										</Button>
+										<Button name="РегистрСведенийУчетРабочегоВремениОткрытьСписок1" id="130">
+											<Type>UsualButton</Type>
+											<CommandName>InformationRegister.УчетРабочегоВремени.StandardCommand.OpenList</CommandName>
+											<ExtendedTooltip name="РегистрСведенийУчетРабочегоВремениОткрытьСписок1РасширеннаяПодсказка" id="131"/>
+										</Button>
+										<Button name="СправочникЭтапыПроектовОткрытьСписок1" id="124">
+											<Type>UsualButton</Type>
+											<CommandName>Catalog.ЭтапыПроектов.StandardCommand.OpenList</CommandName>
+											<ExtendedTooltip name="СправочникЭтапыПроектовОткрытьСписок1РасширеннаяПодсказка" id="125"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Все_ПроектыСоздать" id="144">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Все проекты создать</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Все проекты создать</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Все_ПроектыСоздатьРасширеннаяПодсказка" id="145"/>
+									<ChildItems>
+										<Button name="СправочникЭтапыПроектовСоздать1" id="148">
+											<Type>UsualButton</Type>
+											<CommandName>Catalog.ЭтапыПроектов.StandardCommand.Create</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Добавить этап проекта</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СправочникЭтапыПроектовСоздать1РасширеннаяПодсказка" id="149"/>
+										</Button>
+										<Button name="СправочникЗаказчикиСоздать1" id="150">
+											<Type>UsualButton</Type>
+											<CommandName>Catalog.Заказчики.StandardCommand.Create</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Добавить заказчика</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СправочникЗаказчикиСоздать1РасширеннаяПодсказка" id="151"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Все_Задачи" id="56">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все задачи</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все задачи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Все_ЗадачиРасширеннаяПодсказка" id="57"/>
+							<ChildItems>
+								<Button name="БизнесПроцессНазначитьСозвонСоздать1" id="66">
+									<Type>UsualButton</Type>
+									<CommandName>BusinessProcess.НазначитьСозвон.StandardCommand.Create</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Назначить созвон</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="БизнесПроцессНазначитьСозвонСоздать1РасширеннаяПодсказка" id="67"/>
+								</Button>
+								<Button name="ЗадачаСозвонОткрытьСписок1" id="60">
+									<Type>UsualButton</Type>
+									<CommandName>Task.Созвон.StandardCommand.OpenList</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список созвонов</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЗадачаСозвонОткрытьСписок1РасширеннаяПодсказка" id="61"/>
+								</Button>
+								<Button name="ДокументЗафиксироватьВремяЗадачиСоздать1" id="64">
+									<Type>UsualButton</Type>
+									<CommandName>Document.ЗафиксироватьВремяЗадачи.StandardCommand.Create</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зафиксировать время задач</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ДокументЗафиксироватьВремяЗадачиСоздать1РасширеннаяПодсказка" id="65"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Все_Сотрудники" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все сотрудники</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все сотрудники</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Все_СотрудникиРасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<Button name="СправочникСотрудникиОткрытьСписок1" id="26">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Сотрудники.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="СправочникСотрудникиОткрытьСписок1РасширеннаяПодсказка" id="27"/>
+								</Button>
+								<Button name="СправочникОтделыОткрытьСписок1" id="24">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Отделы.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="СправочникОтделыОткрытьСписок1РасширеннаяПодсказка" id="25"/>
+								</Button>
+								<Button name="СправочникИнститутыОткрытьСписок1" id="28">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Институты.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="СправочникИнститутыОткрытьСписок1РасширеннаяПодсказка" id="29"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Сотрудники" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сотрудники</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сотрудники</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СотрудникиРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<UsualGroup name="СотрудникиОтчеты" id="120">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сотрудники отчеты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сотрудники отчеты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СотрудникиОтчетыРасширеннаяПодсказка" id="121"/>
+							<ChildItems>
+								<Button name="ОтчетОтчетПоРабочемуВремениОткрыть1" id="114">
+									<Type>UsualButton</Type>
+									<CommandName>Report.ОтчетПоРабочемуВремени.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОтчетОтчетПоРабочемуВремениОткрыть1РасширеннаяПодсказка" id="115"/>
+								</Button>
+								<Button name="ОтчетОтчетПоСдельномуВремениОткрыть1" id="116">
+									<Type>UsualButton</Type>
+									<CommandName>Report.ОтчетПоСдельномуВремени.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОтчетОтчетПоСдельномуВремениОткрыть1РасширеннаяПодсказка" id="117"/>
+								</Button>
+								<Button name="ОтчетОтчетПоСотрудникамОткрыть" id="110">
+									<Type>UsualButton</Type>
+									<CommandName>Report.ОтчетПоСотрудникам.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОтчетОтчетПоСотрудникамОткрытьРасширеннаяПодсказка" id="111"/>
+								</Button>
+								<Button name="ОтчетОтчетПоВыполненнымЗадачамОткрыть1" id="112">
+									<Type>UsualButton</Type>
+									<CommandName>Report.ОтчетПоВыполненнымЗадачам.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОтчетОтчетПоВыполненнымЗадачамОткрыть1РасширеннаяПодсказка" id="113"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="СотрудникиОбъекты" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сотрудники объекты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сотрудники объекты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СотрудникиОбъектыРасширеннаяПодсказка" id="119"/>
+							<ChildItems>
+								<Button name="СправочникОтделыОткрытьСписок" id="18">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Отделы.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="СправочникОтделыОткрытьСписокРасширеннаяПодсказка" id="19"/>
+								</Button>
+								<Button name="СправочникСотрудникиОткрытьСписок" id="20">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Сотрудники.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="СправочникСотрудникиОткрытьСписокРасширеннаяПодсказка" id="21"/>
+								</Button>
+								<Button name="СправочникИнститутыОткрытьСписок" id="16">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Институты.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="СправочникИнститутыОткрытьСписокРасширеннаяПодсказка" id="17"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Проекты" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проекты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проекты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПроектыРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<UsualGroup name="ПроектыОбъекты" id="84">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты объекты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты объекты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПроектыОбъектыРасширеннаяПодсказка" id="85"/>
+							<ChildItems>
+								<Button name="РегистрСведенийУчетРабочегоВремениОткрытьСписок" id="78">
+									<Type>UsualButton</Type>
+									<CommandName>InformationRegister.УчетРабочегоВремени.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="РегистрСведенийУчетРабочегоВремениОткрытьСписокРасширеннаяПодсказка" id="79"/>
+								</Button>
+								<Button name="СправочникЭтапыПроектовОткрытьСписок" id="80">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.ЭтапыПроектов.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="СправочникЭтапыПроектовОткрытьСписокРасширеннаяПодсказка" id="81"/>
+								</Button>
+								<Button name="СправочникЗаказчикиОткрытьСписок" id="82">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Заказчики.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="СправочникЗаказчикиОткрытьСписокРасширеннаяПодсказка" id="83"/>
+								</Button>
+								<Button name="СправочникПроектыОткрытьСписок1" id="76">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Проекты.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="СправочникПроектыОткрытьСписок1РасширеннаяПодсказка" id="77"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ПроектыСоздать" id="86">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты создать</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты создать</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПроектыСоздатьРасширеннаяПодсказка" id="87"/>
+							<ChildItems>
+								<Button name="СправочникПроектыСоздать1" id="88">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Проекты.StandardCommand.Create</CommandName>
+									<ExtendedTooltip name="СправочникПроектыСоздать1РасширеннаяПодсказка" id="89"/>
+								</Button>
+								<Button name="РегистрСведенийУчетРабочегоВремениСоздать" id="90">
+									<Type>UsualButton</Type>
+									<CommandName>InformationRegister.УчетРабочегоВремени.StandardCommand.Create</CommandName>
+									<ExtendedTooltip name="РегистрСведенийУчетРабочегоВремениСоздатьРасширеннаяПодсказка" id="91"/>
+								</Button>
+								<Button name="СправочникЭтапыПроектовСоздать" id="92">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.ЭтапыПроектов.StandardCommand.Create</CommandName>
+									<ExtendedTooltip name="СправочникЭтапыПроектовСоздатьРасширеннаяПодсказка" id="93"/>
+								</Button>
+								<Button name="СправочникЗаказчикиСоздать" id="94">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.Заказчики.StandardCommand.Create</CommandName>
+									<ExtendedTooltip name="СправочникЗаказчикиСоздатьРасширеннаяПодсказка" id="95"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ПроектыОтчеты" id="96">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты отчеты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты отчеты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПроектыОтчетыРасширеннаяПодсказка" id="97"/>
+							<ChildItems>
+								<Button name="ОтчетОтчетПоРабочемуВремениОткрыть" id="98">
+									<Type>UsualButton</Type>
+									<CommandName>Report.ОтчетПоРабочемуВремени.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОтчетОтчетПоРабочемуВремениОткрытьРасширеннаяПодсказка" id="99"/>
+								</Button>
+								<Button name="ОтчетОтчетПоСдельномуВремениОткрыть" id="100">
+									<Type>UsualButton</Type>
+									<CommandName>Report.ОтчетПоСдельномуВремени.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОтчетОтчетПоСдельномуВремениОткрытьРасширеннаяПодсказка" id="101"/>
+								</Button>
+								<Button name="ОтчетОтчетПоСозвонамОткрыть" id="102">
+									<Type>UsualButton</Type>
+									<CommandName>Report.ОтчетПоСозвонам.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОтчетОтчетПоСозвонамОткрытьРасширеннаяПодсказка" id="103"/>
+								</Button>
+								<Button name="ОтчетОтчетПоВыполненнымЗадачамОткрыть" id="104">
+									<Type>UsualButton</Type>
+									<CommandName>Report.ОтчетПоВыполненнымЗадачам.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОтчетОтчетПоВыполненнымЗадачамОткрытьРасширеннаяПодсказка" id="105"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="ПроектыСервис" id="156">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты сервис</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проекты сервис</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ПроектыСервисРасширеннаяПодсказка" id="157"/>
+							<ChildItems>
+								<Button name="ОбработкаКанбанДоскаОткрыть1" id="108">
+									<Type>CommandBarButton</Type>
+									<CommandName>DataProcessor.КанбанДоска.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОбработкаКанбанДоскаОткрыть1РасширеннаяПодсказка" id="109"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+				<Page name="Задачи" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<UsualGroup name="ЗадачиСоздать" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задачи создать</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задачи создать</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЗадачиСоздатьРасширеннаяПодсказка" id="55"/>
+							<ChildItems>
+								<Button name="БизнесПроцессНазначитьСозвонСоздать" id="46">
+									<Type>UsualButton</Type>
+									<CommandName>BusinessProcess.НазначитьСозвон.StandardCommand.Create</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Назначить созвон</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="БизнесПроцессНазначитьСозвонСоздатьРасширеннаяПодсказка" id="47"/>
+								</Button>
+								<Button name="ЗадачаЗадачаСоздать" id="50">
+									<Type>UsualButton</Type>
+									<CommandName>Task.Задача.StandardCommand.Create</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создать задачу</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЗадачаЗадачаСоздатьРасширеннаяПодсказка" id="51"/>
+								</Button>
+								<Button name="ДокументЗафиксироватьВремяЗадачиСоздать" id="44">
+									<Type>UsualButton</Type>
+									<CommandName>Document.ЗафиксироватьВремяЗадачи.StandardCommand.Create</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зафиксировать время задач</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ДокументЗафиксироватьВремяЗадачиСоздатьРасширеннаяПодсказка" id="45"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ЗадачиОбъекты" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задачи объекты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задачи объекты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ЗадачиОбъектыРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<Button name="ЗадачаСозвонОткрытьСписок" id="40">
+									<Type>UsualButton</Type>
+									<CommandName>Task.Созвон.StandardCommand.OpenList</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список созвонов</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЗадачаСозвонОткрытьСписокРасширеннаяПодсказка" id="41"/>
+								</Button>
+								<Button name="ЗадачаЗадачаОткрытьСписок" id="42">
+									<Type>UsualButton</Type>
+									<CommandName>Task.Задача.StandardCommand.OpenList</CommandName>
+									<ExtendedTooltip name="ЗадачаЗадачаОткрытьСписокРасширеннаяПодсказка" id="43"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<CommandBar name="ЗадачиСервис" id="154">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задачи сервис</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Задачи сервис</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ЗадачиСервисРасширеннаяПодсказка" id="155"/>
+							<ChildItems>
+								<Button name="ОбработкаТаймерРабочегоВремениОткрыть" id="72">
+									<Type>CommandBarButton</Type>
+									<CommandName>DataProcessor.ТаймерРабочегоВремени.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОбработкаТаймерРабочегоВремениОткрытьРасширеннаяПодсказка" id="73"/>
+								</Button>
+								<Button name="ОбработкаКанбанДоскаОткрыть" id="70">
+									<Type>CommandBarButton</Type>
+									<CommandName>DataProcessor.КанбанДоска.StandardCommand.Open</CommandName>
+									<ExtendedTooltip name="ОбработкаКанбанДоскаОткрытьРасширеннаяПодсказка" id="71"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ПодвалФормыЗадачи_1" id="183">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал формы задачи 1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал формы задачи 1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодвалФормыЗадачи_1РасширеннаяПодсказка" id="184"/>
+			<ChildItems>
+				<LabelDecoration name="КоличествоЗадач" id="167">
+					<TextColor>pal:FirstBrand</TextColor>
+					<Font ref="style:TextLevel2" height="20" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<ContextMenu name="КоличествоЗадачКонтекстноеМеню" id="168"/>
+					<ExtendedTooltip name="КоличествоЗадачРасширеннаяПодсказка" id="169"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПодвалФормыЗадачи_2" id="178">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал формы задачи 2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал формы задачи 2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодвалФормыЗадачи_2РасширеннаяПодсказка" id="179"/>
+			<ChildItems>
+				<LabelDecoration name="ПросроченоЗадач" id="174">
+					<TextColor>#FF5700</TextColor>
+					<Font ref="style:TextLevel2" height="20" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<ContextMenu name="ПросроченоЗадачКонтекстноеМеню" id="175"/>
+					<ExtendedTooltip name="ПросроченоЗадачРасширеннаяПодсказка" id="176"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Таймер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СчетчикСекунд" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счетчик секунд</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьКанбанДоску" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть канбан доску</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть канбан доску</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьКанбанДоску</Action>
+		</Command>
+	</Commands>
+</Form>

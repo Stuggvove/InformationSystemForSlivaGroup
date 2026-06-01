@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoTitle>false</AutoTitle>
+	<CreateButtonsGroupPicture>
+		<xr:Ref>CommonPicture.SlivaLogo_1</xr:Ref>
+		<xr:LoadTransparent>true</xr:LoadTransparent>
+	</CreateButtonsGroupPicture>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОбработкаТаймерРабочегоВремениОткрыть" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>DataProcessor.ТаймерРабочегоВремени.StandardCommand.Open</CommandName>
+				<BackColor>pal:FirstBrand</BackColor>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Начать рабочий день</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОбработкаТаймерРабочегоВремениОткрытьРасширеннаяПодсказка" id="14"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Главное" id="1" DisplayImportance="VeryHigh">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Главное</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>500</Width>
+			<Height>30</Height>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<GroupVerticalAlign>Center</GroupVerticalAlign>
+			<Group>Vertical</Group>
+			<VerticalSpacing>OneAndHalf</VerticalSpacing>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<VerticalAlign>Center</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ThroughAlign>Use</ThroughAlign>
+			<ShowAsCard>true</ShowAsCard>
+			<BackPictureEffect>SemitransparencyAndBlur</BackPictureEffect>
+			<ExtendedTooltip name="ГлавноеРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ЗадачиСотруднику" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи сотруднику</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи сотруднику</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЗадачиСотрудникуРасширеннаяПодсказка" id="22"/>
+					<ChildItems>
+						<Button name="ОбработкаКанбанДоскаОткрыть" id="11">
+							<Type>UsualButton</Type>
+							<CommandName>DataProcessor.КанбанДоска.StandardCommand.Open</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="ОбработкаКанбанДоскаОткрытьРасширеннаяПодсказка" id="12"/>
+						</Button>
+						<Button name="ЗадачаЗадачаОткрытьСписок" id="3">
+							<Type>UsualButton</Type>
+							<CommandName>Task.Задача.StandardCommand.OpenList</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="ЗадачаЗадачаОткрытьСписокРасширеннаяПодсказка" id="4"/>
+						</Button>
+						<Button name="ЗадачаЗадачаСоздать" id="9">
+							<Type>UsualButton</Type>
+							<CommandName>Task.Задача.StandardCommand.Create</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать задачу</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗадачаЗадачаСоздатьРасширеннаяПодсказка" id="10"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="СоозоныСотруднику" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соозоны сотруднику</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соозоны сотруднику</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СоозоныСотрудникуРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<Button name="БизнесПроцессНазначитьСозвонСоздать" id="17">
+							<Type>UsualButton</Type>
+							<CommandName>BusinessProcess.НазначитьСозвон.StandardCommand.Create</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Назначить созвон</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="БизнесПроцессНазначитьСозвонСоздатьРасширеннаяПодсказка" id="18"/>
+						</Button>
+						<Button name="ЗадачаСозвонОткрытьСписок" id="5">
+							<Type>UsualButton</Type>
+							<CommandName>Task.Созвон.StandardCommand.OpenList</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="ЗадачаСозвонОткрытьСписокРасширеннаяПодсказка" id="6"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ВремяСотруднику" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время сотруднику</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время сотруднику</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ВремяСотрудникуРасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<Button name="ДокументЗафиксироватьВремяЗадачиСоздать" id="7">
+							<Type>UsualButton</Type>
+							<CommandName>Document.ЗафиксироватьВремяЗадачи.StandardCommand.Create</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Зафиксировать время задачи</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ДокументЗафиксироватьВремяЗадачиСоздатьРасширеннаяПодсказка" id="8"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ОтчетыСотруднику" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчеты сотруднику</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчеты сотруднику</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ОтчетыСотрудникуРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<Button name="ОтчетОтчетПоВыполненнымЗадачамОткрыть" id="27">
+							<Type>UsualButton</Type>
+							<CommandName>Report.ОтчетПоВыполненнымЗадачам.StandardCommand.Open</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="ОтчетОтчетПоВыполненнымЗадачамОткрытьРасширеннаяПодсказка" id="28"/>
+						</Button>
+						<Button name="ОтчетОтчетПоРабочемуВремениОткрыть" id="29">
+							<Type>UsualButton</Type>
+							<CommandName>Report.ОтчетПоРабочемуВремени.StandardCommand.Open</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="ОтчетОтчетПоРабочемуВремениОткрытьРасширеннаяПодсказка" id="30"/>
+						</Button>
+						<Button name="ОтчетОтчетПоСдельномуВремениОткрыть" id="31">
+							<Type>UsualButton</Type>
+							<CommandName>Report.ОтчетПоСдельномуВремени.StandardCommand.Open</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="ОтчетОтчетПоСдельномуВремениОткрытьРасширеннаяПодсказка" id="32"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="НСИ" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НСИ для сотрудника</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НСИ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="НСИРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<Button name="СправочникПроектыОткрытьСписок" id="35">
+							<Type>UsualButton</Type>
+							<CommandName>Catalog.Проекты.StandardCommand.OpenList</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="СправочникПроектыОткрытьСписокРасширеннаяПодсказка" id="36"/>
+						</Button>
+						<Button name="СправочникСотрудникиОткрытьСписок" id="37">
+							<Type>UsualButton</Type>
+							<CommandName>Catalog.Сотрудники.StandardCommand.OpenList</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="СправочникСотрудникиОткрытьСписокРасширеннаяПодсказка" id="38"/>
+						</Button>
+						<Button name="СправочникОтделыОткрытьСписок" id="43">
+							<Type>UsualButton</Type>
+							<CommandName>Catalog.Отделы.StandardCommand.OpenList</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="СправочникОтделыОткрытьСписокРасширеннаяПодсказка" id="44"/>
+						</Button>
+						<Button name="СправочникИнститутыОткрытьСписок" id="39">
+							<Type>UsualButton</Type>
+							<CommandName>Catalog.Институты.StandardCommand.OpenList</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="СправочникИнститутыОткрытьСписокРасширеннаяПодсказка" id="40"/>
+						</Button>
+						<Button name="СправочникНаправленияОткрытьСписок" id="41">
+							<Type>UsualButton</Type>
+							<CommandName>Catalog.Направления.StandardCommand.OpenList</CommandName>
+							<BackColor>pal:FirstBrand</BackColor>
+							<ExtendedTooltip name="СправочникНаправленияОткрытьСписокРасширеннаяПодсказка" id="42"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+</Form>

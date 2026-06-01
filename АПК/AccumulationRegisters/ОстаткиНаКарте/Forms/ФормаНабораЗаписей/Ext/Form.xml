@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="СуммаСписаний" id="45">
+			<DataPath>СуммаСписаний</DataPath>
+			<ContextMenu name="СуммаСписанийКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="СуммаСписанийРасширеннаяПодсказка" id="47"/>
+		</LabelField>
+		<Table name="НаборЗаписей" id="49">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>НаборЗаписей</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НаборЗаписейКонтекстноеМеню" id="50"/>
+			<AutoCommandBar name="НаборЗаписейКоманднаяПанель" id="51"/>
+			<ExtendedTooltip name="НаборЗаписейРасширеннаяПодсказка" id="52"/>
+			<SearchStringAddition name="НаборЗаписейСтрокаПоиска" id="53">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСтрокаПоискаКонтекстноеМеню" id="54"/>
+				<ExtendedTooltip name="НаборЗаписейСтрокаПоискаРасширеннаяПодсказка" id="55"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НаборЗаписейСостояниеПросмотра" id="56">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСостояниеПросмотраКонтекстноеМеню" id="57"/>
+				<ExtendedTooltip name="НаборЗаписейСостояниеПросмотраРасширеннаяПодсказка" id="58"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НаборЗаписейУправлениеПоиском" id="59">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейУправлениеПоискомКонтекстноеМеню" id="60"/>
+				<ExtendedTooltip name="НаборЗаписейУправлениеПоискомРасширеннаяПодсказка" id="61"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="НомерСтроки" id="64">
+					<DataPath>НаборЗаписей.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="Период" id="68">
+					<DataPath>НаборЗаписей.Period</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<InputField name="ВидДвижения" id="72">
+					<DataPath>НаборЗаписей.RecordType</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВидДвиженияКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ВидДвиженияРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<InputField name="НаименованиеТранзакции" id="76">
+					<DataPath>НаборЗаписей.НаименованиеТранзакции</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НаименованиеТранзакцииКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="НаименованиеТранзакцииРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<InputField name="Валюта" id="80">
+					<DataPath>НаборЗаписей.Валюта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ВалютаКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ВалютаРасширеннаяПодсказка" id="82"/>
+				</InputField>
+				<InputField name="СуммаСписания" id="84">
+					<DataPath>НаборЗаписей.СуммаСписания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СуммаСписанияКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="СуммаСписанияРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="ТекущийБалансКарты" id="88">
+					<DataPath>1/0:80587ffc-48d4-4650-b6b0-abbc91d1f755</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТекущийБалансКартыКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="ТекущийБалансКартыРасширеннаяПодсказка" id="90"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборЗаписей" id="1">
+			<Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ОстаткиНаКарте</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СуммаСписаний" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма списаний</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>
